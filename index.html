@@ -9,7 +9,7 @@
 
   <script src="assets/jquery.min.js" type="text/javascript"></script>
   <script src="assets/bootstrap.min.js" type="text/javascript"></script>
-  <script src="assets/application.js" type="text/javascript" defer="defer" async="async"></script>
+  <!--<script src="assets/application.js" type="text/javascript" defer="defer" async="async"></script> -->
   <script src="assets/filter.js" type="text/javascript"></script>
   <script src="assets/indikatoren_filters.js" type="text/javascript"></script>
   <script src="assets/svg-injector.min.js" type="text/javascript"></script>
@@ -27,358 +27,233 @@
       <!--
       <div class="filter-container"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
       -->
-      <div class="filter-container" id="filter_product"><span class="filter-title">Indikator</span>
+      <div class="filter-container" id="filter_product"><span class="filter-title">Thema</div>
+      <div class="filter-container" id="filter_transfer"><span class="filter-title">Kennzahlenset</div>
+      <div class="filter-container" id="filter_specialfeatures"><span class="filter-title">Special features</div>
+      <div class="filter-container" id="filter_substrate"><span class="filter-title">Substrate</div>
+      <div class="filter-container hidden" id="filter_colors"><span class="filter-title">Color</span></div>
+  	</div>
 
-      <div class="radio">
-        <label>
-          <input type="radio" value=" Security Labels" data-label=" Security Labels" name="product"><span/>
-        </label>
-      </div>
+	<div class="col-sm-9 col-md-10">
+					<div class="page-header">
+		<h1> Indikatoren </h1>
+	</div>
 
-      <div class="radio">
-        <label>
-          <input type="radio" value="Tamper evident Tapes" data-label="Tamper evident Tapes" name="product"><span/>
-        </label>
-      </div>
+  <div class="row" style="display:none;">
 
-      <div class="radio">
-        <label>
-          <input type="radio" value="Security bag sealing tape" data-label="Security bag sealing tape" name="product"><span/>
-        </label>
-      </div>
+    <div class="col-sm-3 col-sm-offset-7 inline-labeling nbm">
+      <label for="l-sort-by">Sort By:</label>
+      <select name="Sort_By" id="l-sort-by" class="corners">
+        <option value="disp_order">Default</option>
+        <option value="name_asc">Name Ascending</option>
+        <option value="name_desc">Name Descending</option>
+        <option value="newest">Newest</option>
+      </select>
     </div>
 
-<div class="filter-container" id="filter_transfer"><span class="filter-title">Transfer</span>
-    <div class="radio">
-      <label>
-        <input type="radio" value="Total transfer" data-label="Total transfer" name="transfer"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Zero transfer" data-label="Zero transfer" name="transfer"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Partial transfer" data-label="Partial transfer" name="transfer"><span/>
-      </label>
+    <div class="col-sm-2 inline-labeling nbm">
+      <label for="l-per-page">View:</label>
+      <span id="per_page"><select size="1" name="per_page" data-perpage="true" class="per-page">      <option value="15">15</option>      <option value="30">30</option>      <option value="60">60</option>      <option value="All">All</option>  </select></span>
     </div>
   </div>
-<div class="filter-container" id="filter_specialfeatures"><span class="filter-title">Special features</span>
-    <div class="radio">
-      <label>
-        <input type="radio" value="Cold- and heat resistant" data-label="Cold- and heat resistant" name="specialfeatures"><span/>
-      </label>
-    </div>
 
-    <div class="radio">
-      <label>
-        <input type="radio" value="Hidden UV message" data-label="Hidden UV message" name="specialfeatures"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Dual colour" data-label="Dual colour" name="specialfeatures"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Transparent" data-label="Transparent" name="specialfeatures"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Numbered and perforated" data-label="Numbered and perforated" name="specialfeatures"><span/>
-      </label>
+  <div class="row catalog-view-products">
+    <div class="col-xs-12 items-container">
+      <div id="filtered_products" class="row"><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_1">
     </div>
   </div>
-<div class="filter-container" id="filter_substrate"><span class="filter-title">Substrate</span>
-    <div class="radio">
-      <label>
-        <input type="radio" value="Paper" data-label="Paper" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Envelope" data-label="Envelope" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Carton" data-label="Carton" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="High energy surfaces" data-label="High energy surfaces" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Metal" data-label="Metal" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Glass" data-label="Glass" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="PVC" data-label="PVC" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Glossy paper" data-label="Glossy paper" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Stretch film" data-label="Stretch film" name="substrate"><span/>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Corona treated PE bags" data-label="Corona treated PE bags" name="substrate"><span/>
-      </label>
-    </div>
-  </div>
-<div class="filter-container hidden" id="filter_colors"><span class="filter-title">Color</span></div>
-		</div>
-
-		<div class="col-sm-9 col-md-10">
-						<div class="page-header">
-			<h1> Indikatoren </h1>
-		</div>
-
-<div class="row" style="display:none;">
-  <div class="col-sm-3 col-sm-offset-7 inline-labeling nbm">
-    <label for="l-sort-by">Sort By:</label>
-    <select name="Sort_By" id="l-sort-by" class="corners">
-      <option value="disp_order">Default</option>
-      <option value="name_asc">Name Ascending</option>
-      <option value="name_desc">Name Descending</option>
-      <option value="newest">Newest</option>
-    </select>
-  </div>
-  <div class="col-sm-2 inline-labeling nbm">
-    <label for="l-per-page">View:</label>
-    <span id="per_page"><select size="1" name="per_page" data-perpage="true" class="per-page">      <option value="15">15</option>      <option value="30">30</option>      <option value="60">60</option>      <option value="All">All</option>  </select></span>
-  </div>
-</div>
-<div class="row catalog-view-products">
-  <div class="col-xs-12 items-container">
-    <div id="filtered_products" class="row"><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_1">
-  </div>
-</div>
 
 		<script>
 		//<![CDATA[
       var products = [
                     {
-    "permalink": "sk95",
-    "title":"Security labels SK 95",
-    "image":"assets/SK95_green_opened.jpg",
-    "description":"<ul> <li>Duo colour orange/yellow and red/green<\/li> <li>Total transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.a.html",
+    "title":"Indikator 0.1.a",
+    "image":"images/0-1-a.jpg",
+    "description":"Wie zufrieden sind Sie mit dem Wohnungsangebot?",
     "id":"3",
-    "product":" Security Labels",
-    "transfer":"Total transfer",
+    "product":" Bevölkerung",
+    "transfer":"Wohnraum",
     "color":["Red","Orange"],
     "specialfeatures":["Dual colour"],
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk88",
-    "title":"Security labels SK 88",
-    "image":"assets/SK88.jpg",
-    "description":"<ul> <li>Matt red, blue, black, green, yellow, grey, purple, orange and white<\/li> <li>Zero transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b1.html",
+    "title":"Indikator 0.1.b1",
+    "image":"images/0-1-b1.jpg",
+    "description":"Mietpreisentwicklung nach Zimmerzahl",
     "id":"16",
-    "product":" Security Labels",
-    "transfer":"Zero transfer",
+    "product":" Bevölkerung",
+    "transfer":"Arbeitsmarkt",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White","Orange"],
     "specialfeatures":"",
     "substrate":["High energy surfaces","Metal","Glass","PVC"],
   },
                       {
-    "permalink": "sk6807",
-    "title":"Security labels SK 6807",
-    "image":"assets/SK6807.jpg",
-    "description":"<ul> <li>Transparent<\/li> <li>Glass &amp; Metal<\/li> <li>Zero transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b2.html",
+    "title":"Indikator 0.1.b2",
+    "image":"images/0-1-b2.jpg",
+    "description":"Mietpreisentwicklung der Leerwohnungen nach Zimmerzahl",
     "id":"17",
-    "product":" Security Labels",
-    "transfer":"Zero transfer",
+    "product":" Bevölkerung",
+    "transfer":"Arbeitsmarkt",
     "color":["Transparent"],
     "specialfeatures":["Transparent"],
     "substrate":["High energy surfaces","Metal","Glass","PVC"],
   },
                       {
-    "permalink": "skc8",
-    "title":"Security labels SK C8",
-    "image":"assets/SKC8.jpg",
-    "description":"<ul> <li>Variety of glossy colours<\/li> <li>Zero transfer<\/li> <li>Cold- and heat resistant<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b3.html",
+    "title":"Indikator 0.1.b3",
+    "image":"images/0-1-b3.jpg",
+    "description":"Mietpreisentwicklung der 3-Zimmerwohnungen",
     "id":"18",
-    "product":" Security Labels",
-    "transfer":"Zero transfer",
+    "product":" Bevölkerung",
+    "transfer":"Arbeitsmarkt",
     "color":["Black","Yellow","White","Transparent"],
     "specialfeatures":["Cold- and heat resistant"],
     "substrate":["High energy surfaces","Metal","Glass","PVC"],
   },
                       {
-    "permalink": "skm84",
-    "title":"Security labels SK M8-4",
-    "image":"assets/SKM84_open.jpg",
-    "description":"<ul> <li>Matt black, blue, red and white<\/li> <li>Zero transfer<\/li> <li>Cold- and heat resistant<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.c.html",
+    "title":"Indikator 0.1.c",
+    "image":"images/0-1-c.jpg",
+    "description":"Wohnungsbelegung nach Belegungsart",
     "id":"21",
-    "product":" Security Labels",
-    "transfer":"Zero transfer",
+    "product":" Bevölkerung",
+    "transfer":"Arbeitsmarkt",
     "color":["Black","Red","White"],
     "specialfeatures":["Cold- and heat resistant"],
     "substrate":["High energy surfaces","Metal","Glass","PVC"],
   },
                       {
-    "permalink": "sk21",
-    "title":"Security labels SK 21",
-    "image":"assets/SK21_open.jpg",
-    "description":"<ul> <li>Matt blue, red and orange<\/li> <li>Partial transfer<\/li> <li>Cold- and heat resistant<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.1.a.html",
+    "title":"Indikator 1.1.a",
+    "image":"images/1-1-a.jpg",
+    "description":"Bevölkerung am Jahresende",
     "id":"22",
-    "product":" Security Labels",
-    "transfer":"Partial transfer",
+    "product":" Bevölkerung",
+    "transfer":"Integration",
     "color":["Blue","Red","Orange"],
     "specialfeatures":["Cold- and heat resistant"],
     "substrate":["Glossy paper","Corona treated PE bags"],
   },
                       {
-    "permalink": "skn3507-clear",
-    "title":"Security labels SKN 3507 clear",
-    "image":"assets/SKN3507.jpg",
-    "description":"<ul> <li>Transparent<\/li> <li>Paper, carton &amp; envelopes<\/li> <li>Total transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.a.html",
+    "title":"Indikator 1.2.a",
+    "image":"images/1-2-a.jpg",
+    "description":"Wohnungsbestand nach Zimmerzahl",
     "id":"23",
-    "product":" Security Labels",
-    "transfer":"Total transfer",
+    "product":" Bevölkerung",
+    "transfer":"Wohnraum",
     "color":["Transparent"],
     "specialfeatures":["Hidden UV message","Transparent"],
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk75",
-    "title":"Security labels SK 75",
-    "image":"assets/SK75_open.jpg",
-    "description":"<ul> <li>Glossy blue, red and silver<\/li> <li>Paper, carton &amp; envelopes<\/li> <li>Total transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.b.html",
+    "title":"Indikator 1.2.b",
+    "image":"images/1-2-b.jpg",
+    "description":"Wohnungsbestand nach Wohnflächenkategorie",
     "id":"24",
-    "product":" Security Labels",
-    "transfer":"Total transfer",
+    "product":" Bevölkerung",
+    "transfer":"Wohnraum",
     "color":["Blue","Red","White","Silver"],
     "specialfeatures":"",
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk81",
-    "title":"Security labels SK 81",
-    "image":"assets/SK81.jpg",
-    "description":"<ul> <li>Wide variety in colours<\/li> <li>Glossy papers &amp; corona treated PE bags<\/li> <li>Partial transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.c1.html",
+    "title":"Indikator 1.2.c1",
+    "image":"images/1-2-c1.jpg",
+    "description":"Nettoproduktion an neuen Wohnungen",
     "id":"39",
-    "product":" Security Labels",
-    "transfer":"Partial transfer",
+    "product":" Bevölkerung",
+    "transfer":"Integration",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White"],
     "specialfeatures":"",
     "substrate":["PVC","Glossy paper","Corona treated PE bags"],
   },
                       {
-    "permalink": "sk84",
-    "title":"Security labels SK 84",
-    "image":"assets/SK84.jpg",
-    "description":"<ul> <li>Wide variety of colours<\/li> <li>Paper, carton &amp; envelopes<\/li> <li>Total transfer<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.c2.html",
+    "title":"Indikator 1.2.c2",
+    "image":"images/1-2-c2.jpg",
+    "description":"Umbausaldo nach Art des Umbaus",
     "id":"40",
-    "product":" Security Labels",
-    "transfer":"Total transfer",
+    "product":" Bevölkerung",
+    "transfer":"Wohnraum",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White","Orange"],
     "specialfeatures":"",
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk6107",
-    "title":"Security labels SK 6107",
-    "image":"assets/SK6107_uv.jpg",
-    "description":"<ul> <li>Glossy transparent<\/li> <li>Partial transfer<\/li> <li>Deliverable with hidden UV message<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.e.html",
+    "title":"Indikator 1.2.e",
+    "image":"images/1-2-e.jpg",
+    "description":"Anzahl neu erstellte Wohnungen",
     "id":"63",
-    "product":" Security Labels",
-    "transfer":"Partial transfer",
+    "product":" Bevölkerung",
+    "transfer":"Integration",
     "color":["Transparent"],
     "specialfeatures":["Hidden UV message","Transparent"],
     "substrate":["PVC","Glossy paper","Corona treated PE bags"],
   },
                       {
-    "permalink": "sk25",
-    "title":"Security labels SK 25",
-    "image":"assets/SK25.jpg",
-    "description":"<ul> <li>Matt blue<\/li> <li>Total transfer<\/li> <li>Cold- and heat resistant<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.f1.html",
+    "title":"Indikator 1.2.f1",
+    "image":"images/1-2-f1.jpg",
+    "description":"Anzahl Leerwohnungen und Leerwohnungsquote nach Zimmerzahl",
     "id":"64",
-    "product":" Security Labels",
-    "transfer":"Total transfer",
+    "product":" Bevölkerung",
+    "transfer":"Wohnraum",
     "color":["Blue"],
     "specialfeatures":["Cold- and heat resistant"],
     "substrate":["Paper","Envelope","Carton","PVC"],
   },
                       {
-    "permalink": "skn72",
-    "title":"Security tape SKN 72",
-    "image":"assets/SKN72.jpg",
-    "description":"<ul> <li>Blue, red and brown<\/li> <li>Total transfer<\/li> <li>No customizing possible<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.f2.html",
+    "title":"Indikator 1.2.f2",
+    "image":"images/1-2-f2.jpg",
+    "description":"Anzahl Leerwohnungen und Leerqohnungsquote nach Wohnflächenkategorie",
     "id":"15",
-    "product":"Tamper evident Tapes",
-    "transfer":"Total transfer",
+    "product":"Raum und Umwelt",
+    "transfer":"Wohnraum",
     "color":["Blue","Red"],
     "specialfeatures":"",
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk76",
-    "title":"Security tape SK 76",
-    "image":"assets/SK76.jpg",
-    "description":"<ul> <li>Blue, red and brown<\/li> <li>Total transfer<\/li> <li>Customizing possible<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.3.a.html",
+    "title":"Indikator 1.3.a",
+    "image":"images/1-3-a.jpg",
+    "description":"Wohnungsbestand nach Wohnflächenkategorie",
     "id":"19",
-    "product":"Tamper evident Tapes",
-    "transfer":"Total transfer",
+    "product":"Raum und Umwelt",
+    "transfer":"Wohnraum",
     "color":["Blue","Red"],
     "specialfeatures":"",
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk76-topprint",
-    "title":"Security tape SK 76 with standard topprint &quot;Security tape&quot;",
-    "image":"assets/SK76_topprint.jpg",
-    "description":"<ul> <li>Blue and red<\/li> <li>Total transfer<\/li> <li>With security topprint<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.4.a1.html",
+    "title":"Indikator 1.4.a1",
+    "image":"images/1-4-a1.jpg",
+    "description":"Haushalte nach Art des Haushalts",
     "id":"20",
-    "product":"Tamper evident Tapes",
-    "transfer":"Total transfer",
+    "product":"Raum und Umwelt",
+    "transfer":"Wohnraum",
     "color":["Blue","Red"],
     "specialfeatures":"",
     "substrate":["Paper","Envelope","Carton"],
   },
                       {
-    "permalink": "sk76-numbering",
-    "title":"Security tape SK 76 with numbering and perforation",
-    "image":"assets/SK76_numbering.jpg",
-    "description":"<ul> <li>Blue and red<\/li> <li>Total transfer<\/li> <li>With numbering and perforation<\/li> <\/ul>",
+    "permalink": "https://charts.basleratlas.ch/indikatoren/Grafik-1.4.a2.html",
+    "title":"Indikator 1.4.a2",
+    "image":"images/1-4-a2.jpg",
+    "description":"Familienhaushalte nach Art der Zusammensetzung",
     "id":"38",
-    "product":"Tamper evident Tapes",
-    "transfer":"Total transfer",
+    "product":"Raum und Umwelt",
+    "transfer":"Wohnraum",
     "color":["Blue","Red"],
     "specialfeatures":["Numbered and perforated"],
     "substrate":["Paper","Envelope","Carton"],
@@ -426,14 +301,10 @@
   </script>
 
   <script id="product_template" type="text/html">
-    <div class="col-sm-4 col-xs-6 item column half small-one-third category-product">
-      <a href="/<%= permalink %>" title="<%= title %>">
-      <img src="/<%= image %>" alt="<%= title %>" title="<%= title %>" class="img-responsive"/>
-      </a>
-      <div class="page-header">
-      <h2><%= title %></h2>
-      </div>
-      <%= description %>
+    <div class="col-md-2 col-sm-4 col-xs-6 item column half small-one-third category-product">
+      <h5><%= title %></h5>
+      <a href="<%= permalink %>" title="<%= title %>: <%= description %>">
+      <img src="/<%= image %>" alt="<%= title %>: <%= description %> " title="<%= title %>: <%= description %> " class="img-responsive"/>
       </a>
     </div>
   </script>
@@ -454,6 +325,7 @@
   </script>
   <script language="JavaScript">
   <!--
+
     function uncheckAll()
     {
       allInp = document.getElementsByTagName("input");
@@ -466,9 +338,10 @@
         }
       }
     }
+
   //-->
   </script>
 		</div>
 	</div>
 </div>
-            </main>
+</main>
