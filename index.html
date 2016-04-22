@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html >
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <base href=".">
-  <meta name="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Indikatorenportal</title>
   <link rel="stylesheet" href="assets/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css" type="text/css">
 
-  <!--
   <link rel="stylesheet" href="assets/compiled.css" type="text/css">
+  <!--
+  <link rel="stylesheet" href="assets/css" type="text/css">
   <link rel="stylesheet" href="assets/custom.css" type="text/css">
   <link rel="stylesheet" href="assets/finder.css" type="text/css">
   -->
@@ -31,31 +27,33 @@
 	<div class="row">
 		<div class="col-sm-3 col-md-2">
 
-<div class="filter-block-title">Filter</div>
-<div class="filter-container filter-reset"><button class="btn btn-link btn-xs btn-block" onclick="uncheckAll()">Filter zurücksetzen</button></div>
-<div class="filter-container" style="display: none;"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
-<div class="filter-container" id="filter_product"><span class="filter-title">Indikator</span>
-    <div class="radio">
-      <label>
-        <input type="radio" value=" Security Labels" data-label=" Security Labels" name="product">
-        <span> Security Labels (12)</span>
-      </label>
+      <div class="filter-block-title">Filter</div>
+      <div class="filter-container filter-reset"><button class="btn btn-link btn-xs btn-block" onclick="uncheckAll()">Filter zurücksetzen</button></div>
+      <div class="filter-container" style="display: none;"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
+      <div class="filter-container" id="filter_product"><span class="filter-title">Indikator</span>
+
+      <div class="radio">
+        <label>
+          <input type="radio" value=" Security Labels" data-label=" Security Labels" name="product">
+          <span> Security Labels (12)</span>
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" value="Tamper evident Tapes" data-label="Tamper evident Tapes" name="product">
+          <span>Tamper evident Tapes (8)</span>
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" value="Security bag sealing tape" data-label="Security bag sealing tape" name="product">
+          <span>Security bag sealing tape (2)</span>
+        </label>
+      </div>
     </div>
 
-    <div class="radio">
-      <label>
-        <input type="radio" value="Tamper evident Tapes" data-label="Tamper evident Tapes" name="product">
-        <span>Tamper evident Tapes (8)</span>
-      </label>
-    </div>
-
-    <div class="radio">
-      <label>
-        <input type="radio" value="Security bag sealing tape" data-label="Security bag sealing tape" name="product">
-        <span>Security bag sealing tape (2)</span>
-      </label>
-    </div>
-  </div>
 <div class="filter-container" id="filter_transfer"><span class="filter-title">Transfer</span>
     <div class="radio">
       <label>
@@ -187,9 +185,10 @@
   </div>
 <div class="filter-container hidden" id="filter_colors"><span class="filter-title">Color</span></div>
 		</div>
+
 		<div class="col-sm-9 col-md-10">
 						<div class="page-header">
-			<h1> Products </h1>
+			<h1> Indikatoren </h1>
 		</div>
 
 <div class="row" style="display:none;">
@@ -210,165 +209,10 @@
 <div class="row catalog-view-products">
   <div class="col-xs-12 items-container">
     <div id="filtered_products" class="row"><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_1">
-      <a href="http://sealkingeurope.com/sk95" title="Security labels SK 95">
-      <img src="assets/SK95_green_opened.jpg" alt="Security labels SK 95" title="Security labels SK 95" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 95</h2>
-      </div>
-      <ul> <li>Duo colour orange/yellow and red/green</li> <li>Total transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_2">
-      <a href="http://sealkingeurope.com/sk88" title="Security labels SK 88">
-      <img src="assets/SK88.jpg" alt="Security labels SK 88" title="Security labels SK 88" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 88</h2>
-      </div>
-      <ul> <li>Matt red, blue, black, green, yellow, grey, purple, orange and white</li> <li>Zero transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_3">
-      <a href="http://sealkingeurope.com/sk6807" title="Security labels SK 6807">
-      <img src="assets/SK6807.jpg" alt="Security labels SK 6807" title="Security labels SK 6807" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 6807</h2>
-      </div>
-      <ul> <li>Transparent</li> <li>Glass &amp; Metal</li> <li>Zero transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_4">
-      <a href="http://sealkingeurope.com/skc8" title="Security labels SK C8">
-      <img src="assets/SKC8.jpg" alt="Security labels SK C8" title="Security labels SK C8" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK C8</h2>
-      </div>
-      <ul> <li>Variety of glossy colours</li> <li>Zero transfer</li> <li>Cold- and heat resistant</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_5">
-      <a href="http://sealkingeurope.com/skm84" title="Security labels SK M8-4">
-      <img src="assets/SKM84_open.jpg" alt="Security labels SK M8-4" title="Security labels SK M8-4" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK M8-4</h2>
-      </div>
-      <ul> <li>Matt black, blue, red and white</li> <li>Zero transfer</li> <li>Cold- and heat resistant</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_6">
-      <a href="http://sealkingeurope.com/sk21" title="Security labels SK 21">
-      <img src="assets/SK21_open.jpg" alt="Security labels SK 21" title="Security labels SK 21" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 21</h2>
-      </div>
-      <ul> <li>Matt blue, red and orange</li> <li>Partial transfer</li> <li>Cold- and heat resistant</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_7">
-      <a href="http://sealkingeurope.com/skn3507-clear" title="Security labels SKN 3507 clear">
-      <img src="assets/SKN3507.jpg" alt="Security labels SKN 3507 clear" title="Security labels SKN 3507 clear" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SKN 3507 clear</h2>
-      </div>
-      <ul> <li>Transparent</li> <li>Paper, carton &amp; envelopes</li> <li>Total transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_8">
-      <a href="http://sealkingeurope.com/sk75" title="Security labels SK 75">
-      <img src="assets/SK75_open.jpg" alt="Security labels SK 75" title="Security labels SK 75" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 75</h2>
-      </div>
-      <ul> <li>Glossy blue, red and silver</li> <li>Paper, carton &amp; envelopes</li> <li>Total transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_9">
-      <a href="http://sealkingeurope.com/sk81" title="Security labels SK 81">
-      <img src="assets/SK81.jpg" alt="Security labels SK 81" title="Security labels SK 81" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 81</h2>
-      </div>
-      <ul> <li>Wide variety in colours</li> <li>Glossy papers &amp; corona treated PE bags</li> <li>Partial transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_10">
-      <a href="http://sealkingeurope.com/sk84" title="Security labels SK 84">
-      <img src="assets/SK84.jpg" alt="Security labels SK 84" title="Security labels SK 84" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 84</h2>
-      </div>
-      <ul> <li>Wide variety of colours</li> <li>Paper, carton &amp; envelopes</li> <li>Total transfer</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_11">
-      <a href="http://sealkingeurope.com/sk6107" title="Security labels SK 6107">
-      <img src="assets/SK6107_uv.jpg" alt="Security labels SK 6107" title="Security labels SK 6107" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 6107</h2>
-      </div>
-      <ul> <li>Glossy transparent</li> <li>Partial transfer</li> <li>Deliverable with hidden UV message</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_12">
-      <a href="http://sealkingeurope.com/sk25" title="Security labels SK 25">
-      <img src="assets/SK25.jpg" alt="Security labels SK 25" title="Security labels SK 25" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security labels SK 25</h2>
-      </div>
-      <ul> <li>Matt blue</li> <li>Total transfer</li> <li>Cold- and heat resistant</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_13">
-      <a href="http://sealkingeurope.com/skn72" title="Security tape SKN 72">
-      <img src="assets/SKN72.jpg" alt="Security tape SKN 72" title="Security tape SKN 72" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security tape SKN 72</h2>
-      </div>
-      <ul> <li>Blue, red and brown</li> <li>Total transfer</li> <li>No customizing possible</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_14">
-      <a href="http://sealkingeurope.com/sk76" title="Security tape SK 76">
-      <img src="assets/SK76.jpg" alt="Security tape SK 76" title="Security tape SK 76" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security tape SK 76</h2>
-      </div>
-      <ul> <li>Blue, red and brown</li> <li>Total transfer</li> <li>Customizing possible</li> </ul>
-
-    </div><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_15">
-      <a href="http://sealkingeurope.com/sk76-topprint" title="Security tape SK 76 with standard topprint &quot;Security tape&quot;">
-      <img src="assets/SK76_topprint.jpg" alt="Security tape SK 76 with standard topprint &quot;Security tape&quot;" title="Security tape SK 76 with standard topprint &quot;Security tape&quot;" class="img-responsive">
-      </a>
-      <div class="page-header">
-      <h2>Security tape SK 76 with standard topprint "Security tape"</h2>
-      </div>
-      <ul> <li>Blue and red</li> <li>Total transfer</li> <li>With security topprint</li> </ul>
-
-    </div></div>
-  </div>
-</div>
-
-<div class="row filter-items-container bottom-pagination">
-<div class="column whole align-center page-links heading-decoration" id="pagination">
-    <span class="page-links-container">
-      <strong class="semibold">Pages:</strong>
-
-
-        <a href="http://sealkingeurope.com/products#" data-page="1" class="page-links-active">1</a>
-
-        <a href="http://sealkingeurope.com/products#" data-page="2" class="page-links-inactive">2</a>
-
-
-        <a href="http://sealkingeurope.com/products#" data-page="last">Last</a></span>
-
+<div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_2">
 
   </div>
 </div>
-<div class="row prod-ctgy-hdft-footer">
-</div>
-<div class="row hdft-footer">
-</div>
-
 
 		<script>
 		//<![CDATA[
