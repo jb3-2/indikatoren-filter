@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html >
+<html lang="de">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Indikatorenportal</title>
   <link rel="stylesheet" href="assets/bootstrap.min.css">
-
-  <link rel="stylesheet" href="assets/compiled.css" type="text/css">
-  <!--
-  <link rel="stylesheet" href="assets/css" type="text/css">
   <link rel="stylesheet" href="assets/custom.css" type="text/css">
+  <!--
+  <link rel="stylesheet" href="assets/compiled.css" type="text/css">
+  <link rel="stylesheet" href="assets/css" type="text/css">
   <link rel="stylesheet" href="assets/finder.css" type="text/css">
   -->
   <script src="assets/jquery.min.js" type="text/javascript"></script>
@@ -19,37 +18,35 @@
   <script src="assets/svg-injector.min.js" type="text/javascript"></script>
 </head>
 
-<body class="option-com-content view-category item-110 path-products home-0">
-    <main class="content-wrapper">
+<body>
+    <main>
 
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 col-md-2">
-
       <div class="filter-block-title">Filter</div>
       <div class="filter-container filter-reset"><button class="btn btn-link btn-xs btn-block" onclick="uncheckAll()">Filter zurücksetzen</button></div>
-      <div class="filter-container" style="display: none;"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
+      <!--
+      <div class="filter-container"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
+      -->
       <div class="filter-container" id="filter_product"><span class="filter-title">Indikator</span>
 
       <div class="radio">
         <label>
-          <input type="radio" value=" Security Labels" data-label=" Security Labels" name="product">
-          <span> Security Labels (12)</span>
+          <input type="radio" value=" Security Labels" data-label=" Security Labels" name="product"><span/>
         </label>
       </div>
 
       <div class="radio">
         <label>
-          <input type="radio" value="Tamper evident Tapes" data-label="Tamper evident Tapes" name="product">
-          <span>Tamper evident Tapes (8)</span>
+          <input type="radio" value="Tamper evident Tapes" data-label="Tamper evident Tapes" name="product"><span/>
         </label>
       </div>
 
       <div class="radio">
         <label>
-          <input type="radio" value="Security bag sealing tape" data-label="Security bag sealing tape" name="product">
-          <span>Security bag sealing tape (2)</span>
+          <input type="radio" value="Security bag sealing tape" data-label="Security bag sealing tape" name="product"><span/>
         </label>
       </div>
     </div>
@@ -57,129 +54,111 @@
 <div class="filter-container" id="filter_transfer"><span class="filter-title">Transfer</span>
     <div class="radio">
       <label>
-        <input type="radio" value="Total transfer" data-label="Total transfer" name="transfer">
-        <span>Total transfer (13)</span>
+        <input type="radio" value="Total transfer" data-label="Total transfer" name="transfer"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Zero transfer" data-label="Zero transfer" name="transfer">
-        <span>Zero transfer (5)</span>
+        <input type="radio" value="Zero transfer" data-label="Zero transfer" name="transfer"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Partial transfer" data-label="Partial transfer" name="transfer">
-        <span>Partial transfer (4)</span>
+        <input type="radio" value="Partial transfer" data-label="Partial transfer" name="transfer"><span/>
       </label>
     </div>
   </div>
 <div class="filter-container" id="filter_specialfeatures"><span class="filter-title">Special features</span>
     <div class="radio">
       <label>
-        <input type="radio" value="Cold- and heat resistant" data-label="Cold- and heat resistant" name="specialfeatures">
-        <span>Cold- and heat resistant (6)</span>
+        <input type="radio" value="Cold- and heat resistant" data-label="Cold- and heat resistant" name="specialfeatures"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Hidden UV message" data-label="Hidden UV message" name="specialfeatures">
-        <span>Hidden UV message (2)</span>
+        <input type="radio" value="Hidden UV message" data-label="Hidden UV message" name="specialfeatures"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Dual colour" data-label="Dual colour" name="specialfeatures">
-        <span>Dual colour (1)</span>
+        <input type="radio" value="Dual colour" data-label="Dual colour" name="specialfeatures"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Transparent" data-label="Transparent" name="specialfeatures">
-        <span>Transparent (3)</span>
+        <input type="radio" value="Transparent" data-label="Transparent" name="specialfeatures"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Numbered and perforated" data-label="Numbered and perforated" name="specialfeatures">
-        <span>Numbered and perforated (3)</span>
+        <input type="radio" value="Numbered and perforated" data-label="Numbered and perforated" name="specialfeatures"><span/>
       </label>
     </div>
   </div>
 <div class="filter-container" id="filter_substrate"><span class="filter-title">Substrate</span>
     <div class="radio">
       <label>
-        <input type="radio" value="Paper" data-label="Paper" name="substrate">
-        <span>Paper (12)</span>
+        <input type="radio" value="Paper" data-label="Paper" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Envelope" data-label="Envelope" name="substrate">
-        <span>Envelope (12)</span>
+        <input type="radio" value="Envelope" data-label="Envelope" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Carton" data-label="Carton" name="substrate">
-        <span>Carton (12)</span>
+        <input type="radio" value="Carton" data-label="Carton" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="High energy surfaces" data-label="High energy surfaces" name="substrate">
-        <span>High energy surfaces (5)</span>
+        <input type="radio" value="High energy surfaces" data-label="High energy surfaces" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Metal" data-label="Metal" name="substrate">
-        <span>Metal (5)</span>
+        <input type="radio" value="Metal" data-label="Metal" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Glass" data-label="Glass" name="substrate">
-        <span>Glass (5)</span>
+        <input type="radio" value="Glass" data-label="Glass" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="PVC" data-label="PVC" name="substrate">
-        <span>PVC (8)</span>
+        <input type="radio" value="PVC" data-label="PVC" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Glossy paper" data-label="Glossy paper" name="substrate">
-        <span>Glossy paper (4)</span>
+        <input type="radio" value="Glossy paper" data-label="Glossy paper" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Stretch film" data-label="Stretch film" name="substrate">
-        <span>Stretch film (3)</span>
+        <input type="radio" value="Stretch film" data-label="Stretch film" name="substrate"><span/>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" value="Corona treated PE bags" data-label="Corona treated PE bags" name="substrate">
-        <span>Corona treated PE bags (5)</span>
+        <input type="radio" value="Corona treated PE bags" data-label="Corona treated PE bags" name="substrate"><span/>
       </label>
     </div>
   </div>
@@ -209,8 +188,6 @@
 <div class="row catalog-view-products">
   <div class="col-xs-12 items-container">
     <div id="filtered_products" class="row"><div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_1">
-<div class="col-sm-4 col-xs-6 item column half small-one-third category-product fjs_item" id="fjs_2">
-
   </div>
 </div>
 
