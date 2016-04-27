@@ -19,12 +19,13 @@
 
 .item{
   border: 1px solid #d5d5d5;
+  border-radius:4px;
   margin: 2px;
 }
 
 .page-header{
   border: 0;
-  padding: 0; 
+  padding: 0;
   margin-top: 30px;
   margin-bottom: 0;
 }
