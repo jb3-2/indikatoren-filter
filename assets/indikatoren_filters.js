@@ -45,6 +45,7 @@
 
     var FJS = FilterJS(themas, '#filtered_themas', {
       template: '#thema_template',
+      search: { ele: '#searchbox' }, 
       callbacks: {
         afterFilter: afterFilter,
         shortResult: shortResult
