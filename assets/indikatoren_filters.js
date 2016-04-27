@@ -6,18 +6,18 @@
     renderSubstrate();
     initInputs();
 
-    var ProductJQ = JsonQuery(products);
+    var ThemaJQ = JsonQuery(themas);
 
     var all_filters = [
-      { field: 'product'},
-      { field: 'transfer'},
+      { field: 'thema'},
+      { field: 'kennzahlenset'},
       { field: 'substrate'},
       { field: 'specialfeatures'}
     ]
 
     var checkbox_filters = [
-      { field: 'product'},
-      { field: 'transfer'}
+      { field: 'thema'},
+      { field: 'kennzahlenset'}
     ];
 
     var checkbox_array_filters = [
@@ -32,7 +32,7 @@
     var queryHash = parseUrlHash();
 
     $.each(checkbox_filters, function(i, filter){
-      var options = ProductJQ.uniq(filter.field).pluck(filter.field).all;
+      var options = ThemaJQ.uniq(filter.field).pluck(filter.field).all;
 
       if(filter.order){
         //console.log(options)
@@ -43,8 +43,8 @@
       //renderCheckboxFilters(options, '#checkbox_template', '#filter_' + filter.field, filter.postfix, queryHash[filter.field] || []);
     });
 
-    var FJS = FilterJS(products, '#filtered_products', {
-      template: '#product_template',
+    var FJS = FilterJS(themas, '#filtered_themas', {
+      template: '#thema_template',
       callbacks: {
         afterFilter: afterFilter,
         shortResult: shortResult
