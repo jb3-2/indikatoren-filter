@@ -22,13 +22,13 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-3 col-md-2">
-      <div class="filter-block-title">Filter</div>
+      <!--<div class="filter-block-title">Filter</div> -->
       <div class="filter-container filter-reset"><button class="btn btn-link btn-xs btn-block" onclick="uncheckAll()">Filter zurücksetzen</button></div>
       <div class="filter-container"><input type="text" id="searchbox" class="searchbox" placeholder="Suche..."></div>
       <div class="filter-container" id="filter_thema"><span class="filter-title">Thema</div>
       <div class="filter-container" id="filter_kennzahlenset"><span class="filter-title">Kennzahlenset</div>
-      <div class="filter-container" id="filter_specialfeatures"><span class="filter-title">Special features</div>
-      <div class="filter-container" id="filter_substrate"><span class="filter-title">Substrate</div>
+      <div class="filter-container" id="filter_raeumlicheGliederung"><span class="filter-title">Räumliche Gliederung</div>
+      <div class="filter-container" id="filter_schlagwort"><span class="filter-title">Schlagwort</div>
       <div class="filter-container hidden" id="filter_colors"><span class="filter-title">Color</span></div>
   	</div>
 
@@ -73,8 +73,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Wohnraum",
     "color":["Red","Orange"],
-    "specialfeatures":["Dual colour"],
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":["Wohnviertel"],
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b1.html",
@@ -85,8 +85,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Arbeitsmarkt",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White","Orange"],
-    "specialfeatures":"",
-    "substrate":["High energy surfaces","Metal","Glass","PVC"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Einkommen","EuroAirport","Geschlecht","Haushalt"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b2.html",
@@ -97,8 +97,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Arbeitsmarkt",
     "color":["Transparent"],
-    "specialfeatures":["Transparent"],
-    "substrate":["High energy surfaces","Metal","Glass","PVC"],
+    "raeumlicheGliederung":["Wohnblockseite"],
+    "schlagwort":["Einkommen","EuroAirport","Geschlecht","Haushalt"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.b3.html",
@@ -109,8 +109,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Arbeitsmarkt",
     "color":["Black","Yellow","White","Transparent"],
-    "specialfeatures":["Cold- and heat resistant"],
-    "substrate":["High energy surfaces","Metal","Glass","PVC"],
+    "raeumlicheGliederung":["Kanton"],
+    "schlagwort":["Einkommen","EuroAirport","Geschlecht","Haushalt"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-0.1.c.html",
@@ -121,8 +121,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Arbeitsmarkt",
     "color":["Black","Red","White"],
-    "specialfeatures":["Cold- and heat resistant"],
-    "substrate":["High energy surfaces","Metal","Glass","PVC"],
+    "raeumlicheGliederung":["Kanton"],
+    "schlagwort":["Einkommen","EuroAirport","Geschlecht","Haushalt"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.1.a.html",
@@ -133,8 +133,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Integration",
     "color":["Blue","Red","Orange"],
-    "specialfeatures":["Cold- and heat resistant"],
-    "substrate":["Glossy paper","Corona treated PE bags"],
+    "raeumlicheGliederung":["Kanton"],
+    "schlagwort":["Ausländer","Religion"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.a.html",
@@ -145,8 +145,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Wohnraum",
     "color":["Transparent"],
-    "specialfeatures":["Hidden UV message","Transparent"],
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":["Block","Wohnblockseite"],
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.b.html",
@@ -157,8 +157,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Wohnraum",
     "color":["Blue","Red","White","Silver"],
-    "specialfeatures":"",
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.c1.html",
@@ -169,8 +169,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Integration",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White"],
-    "specialfeatures":"",
-    "substrate":["PVC","Glossy paper","Corona treated PE bags"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Haushalt","Ausländer","Religion"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.c2.html",
@@ -181,8 +181,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Wohnraum",
     "color":["Black","Blue","Red","Green","Yellow","Grey","Purple","White","Orange"],
-    "specialfeatures":"",
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.e.html",
@@ -193,8 +193,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Integration",
     "color":["Transparent"],
-    "specialfeatures":["Hidden UV message","Transparent"],
-    "substrate":["PVC","Glossy paper","Corona treated PE bags"],
+    "raeumlicheGliederung":["Block","Wohnblockseite"],
+    "schlagwort":["Haushalt","Ausländer","Religion"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.f1.html",
@@ -205,8 +205,8 @@
     "thema":" Bevölkerung",
     "kennzahlenset":"Wohnraum",
     "color":["Blue"],
-    "specialfeatures":["Cold- and heat resistant"],
-    "substrate":["Paper","Envelope","Carton","PVC"],
+    "raeumlicheGliederung":["Kanton"],
+    "schlagwort":["Heimat","Gebäude","Personal","Haushalt"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.2.f2.html",
@@ -217,8 +217,8 @@
     "thema":"Raum und Umwelt",
     "kennzahlenset":"Wohnraum",
     "color":["Blue","Red"],
-    "specialfeatures":"",
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.3.a.html",
@@ -229,8 +229,8 @@
     "thema":"Raum und Umwelt",
     "kennzahlenset":"Wohnraum",
     "color":["Blue","Red"],
-    "specialfeatures":"",
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.4.a1.html",
@@ -241,8 +241,8 @@
     "thema":"Raum und Umwelt",
     "kennzahlenset":"Wohnraum",
     "color":["Blue","Red"],
-    "specialfeatures":"",
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":"",
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                       {
     "url": "https://charts.basleratlas.ch/indikatoren/Grafik-1.4.a2.html",
@@ -253,8 +253,8 @@
     "thema":"Raum und Umwelt",
     "kennzahlenset":"Wohnraum",
     "color":["Blue","Red"],
-    "specialfeatures":["Numbered and perforated"],
-    "substrate":["Paper","Envelope","Carton"],
+    "raeumlicheGliederung":["Gemeinde"],
+    "schlagwort":["Heimat","Gebäude","Personal"],
   },
                 ];
     //]]>

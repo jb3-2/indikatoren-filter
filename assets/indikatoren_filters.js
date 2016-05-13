@@ -3,7 +3,7 @@
 
     //renderColors();
     renderSpecialFeatures();
-    renderSubstrate();
+    renderSchlagwort();
     initInputs();
 
     var ThemaJQ = JsonQuery(themas);
@@ -11,8 +11,8 @@
     var all_filters = [
       { field: 'thema'},
       { field: 'kennzahlenset'},
-      { field: 'substrate'},
-      { field: 'specialfeatures'}
+      { field: 'schlagwort'},
+      { field: 'raeumlicheGliederung'}
     ]
 
     var checkbox_filters = [
@@ -25,8 +25,8 @@
     ];
 
     var checkbox_array_radio_filters = [
-      { field: 'specialfeatures'},
-      { field: 'substrate'}
+      { field: 'raeumlicheGliederung'},
+      { field: 'schlagwort'}
     ];
 
     var queryHash = parseUrlHash();
@@ -45,7 +45,7 @@
 
     var FJS = FilterJS(themas, '#filtered_themas', {
       template: '#thema_template',
-      search: { ele: '#searchbox' }, 
+      search: { ele: '#searchbox' },
       callbacks: {
         afterFilter: afterFilter,
         shortResult: shortResult
@@ -130,10 +130,10 @@
   });
 
   function initInputs(){
-    //$('#filter_substrate :checkbox').prop('checked', true);
+    //$('#filter_schlagwort :checkbox').prop('checked', true);
 
-    /*$('#filter_substrate_all').on('click', function(){
-      $('#filter_substrate :checkbox').prop('checked', $(this).is(':checked'));
+    /*$('#filter_schlagwort_all').on('click', function(){
+      $('#filter_schlagwort :checkbox').prop('checked', $(this).is(':checked'));
     });*/
   }
 
@@ -174,12 +174,12 @@
   }
 
   function renderSpecialFeatures(){
-    var arr = ["Cold- and heat resistant","Hidden UV message","Dual colour","Transparent","Numbered and perforated"];
+    var arr = ["Kanton","Gemeinde","Wohnviertel","Bezirk","Block","Blockseite"];
 
     var html = $('#array_radio_template').html();
     var templateFn = FilterJS.templateBuilder(html)
-    var container = $('#filter_specialfeatures');
-    var title = 'specialfeatures';
+    var container = $('#filter_raeumlicheGliederung');
+    var title = 'raeumlicheGliederung';
 
 
     $.each(arr, function(i, c){
@@ -187,14 +187,14 @@
     });
   }
 
-  function renderSubstrate(){
-    var arr = ["Paper","Envelope","Carton","High energy surfaces","Metal","Glass","PVC","Glossy paper","Stretch film","Corona treated PE bags"];
+  function renderSchlagwort(){
+    var arr = ["Heimat","Gebäude","Personal","Einkommen","EuroAirport","Geschlecht","Haushalt","Ausländer","Alter","Religion"];
 
     var html = $('#array_radio_template').html();
     //var html = $('#array-template').html();
     var templateFn = FilterJS.templateBuilder(html)
-    var container = $('#filter_substrate');
-    var title = 'substrate';
+    var container = $('#filter_schlagwort');
+    var title = 'schlagwort';
 
     $.each(arr, function(i, c){
       //container.append(templateFn({ name: c, value: c }))
